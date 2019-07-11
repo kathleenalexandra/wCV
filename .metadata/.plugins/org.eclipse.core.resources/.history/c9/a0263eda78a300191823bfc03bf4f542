@@ -212,14 +212,14 @@ void Accelero_Sensor_Handler(void *handle, uint32_t msTick, uint32_t *msTickStat
     	floatToInt(r, &d1, &d2, 3);
     	floatToInt(theta, &d3, &d4, 3);
     	floatToInt(phi, &d5, &d6, 3);
-    	sprintf( dataOut, "\n\rr:  %d.%03d, theta: %d.%03d, phi: %d.%03d",
+    	sprintf( dataOut, "\n\rr: %d, theta: %d.%03d, phi: %d.%03d",
     			(int)d1, (int)d2,
 				(int)d3, (int)d4,
 				(int)d5, (int)d6
 				);
 
     	CDC_Fill_Buffer((uint8_t *)dataOut, strlen(dataOut));
-    	sprintf(dataOut, "\n\rA_x: %d, A_y: %d, A_z: %d,  |A|: %d.%03d",
+    	sprintf(dataOut, "\n\rA_x: %d, A_y: %d, A_z: %d, |A|: %d.%03d",
     			acceleration.AXIS_X,
 				acceleration.AXIS_Y,
 				acceleration.AXIS_Z,
@@ -230,7 +230,7 @@ void Accelero_Sensor_Handler(void *handle, uint32_t msTick, uint32_t *msTickStat
 
  /*tutorial 3 p2*/
 
-sprintf(dataOut, "\n\rA_z: %d,  *state: %d, msTick - *msTickStateChange:%d, tau: %d",
+sprintf(dataOut, "\n\rA_z: d%, *state: %d, msTick - *msTickStateChange: %d, tau: %d",
 		(int) acceleration.AXIS_Z,
 		(int) *state,
 		(int) (msTick - *msTickStateChange),
@@ -394,7 +394,7 @@ void Gyro_Sensor_Handler( void *handle )
     	    	  CDC_Fill_Buffer(( uint8_t * )dataOut, strlen( dataOut ));
 
     	    	  if(abs_acc > 40000) {
-
+    	    		  sprintf(dataOut, "\n\r\t\t\tAngular Velocity > 40,000!!");
     	    		  CDC_Fill_Buffer((uint8_t *)dataOut, strlen( dataOut));
     	    	  }
 

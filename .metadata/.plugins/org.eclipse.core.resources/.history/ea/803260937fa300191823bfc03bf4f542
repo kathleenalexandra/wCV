@@ -394,7 +394,7 @@ void Gyro_Sensor_Handler( void *handle )
     	    	  CDC_Fill_Buffer(( uint8_t * )dataOut, strlen( dataOut ));
 
     	    	  if(abs_acc > 40000) {
-
+    	    		  sprintf(dataOut, "\n\r\t\t\tAngular Velocity > 40,000!!");
     	    		  CDC_Fill_Buffer((uint8_t *)dataOut, strlen( dataOut));
     	    	  }
 

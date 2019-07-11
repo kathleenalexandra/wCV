@@ -230,7 +230,7 @@ void Accelero_Sensor_Handler(void *handle, uint32_t msTick, uint32_t *msTickStat
 
  /*tutorial 3 p2*/
 
-sprintf(dataOut, "\n\rA_z: %d,  *state: %d, msTick - *msTickStateChange:%d, tau: %d",
+sprintf(dataOut, "\n\rA_z: d%, *state: %d, msTick - *msTickStateChange: %d, tau: %d",
 		(int) acceleration.AXIS_Z,
 		(int) *state,
 		(int) (msTick - *msTickStateChange),
@@ -394,7 +394,7 @@ void Gyro_Sensor_Handler( void *handle )
     	    	  CDC_Fill_Buffer(( uint8_t * )dataOut, strlen( dataOut ));
 
     	    	  if(abs_acc > 40000) {
-
+    	    		  sprintf(dataOut, "\n\r\t\t\tAngular Velocity > 40,000!!");
     	    		  CDC_Fill_Buffer((uint8_t *)dataOut, strlen( dataOut));
     	    	  }
 

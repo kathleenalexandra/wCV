@@ -240,12 +240,12 @@ CDC_Fill_Buffer((uint8_t *)dataOut, strlen(dataOut));
 
 if((*state == 0 ) && (z < -z_thresh) && ((msTick - *msTickStateChange) > tau) ) {
 	*state = 1;
-	*msTickStateChange = msTick;
+	*msTickStateChange - msTick;
 }
 
 else if ((*state == 1) && (z > z_thresh) && ((msTick - *msTickStateChange)  > tau)){
 	*state = 2;
-	*msTickStateChange = msTick;
+	*msTickStateChange - msTick;
 }
 
 else if ((*state == 2) && ((msTick - *msTickStateChange)  < tau)){
@@ -255,7 +255,7 @@ else if ((*state == 2) && ((msTick - *msTickStateChange)  < tau)){
 
 else if (( msTick  - *msTickStateChange ) > tau) {
 	*state = 0;
-	*msTickStateChange = msTick;
+	*msTickStateChange - msTick;
 }
 
 
