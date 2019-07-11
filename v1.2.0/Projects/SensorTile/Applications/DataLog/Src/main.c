@@ -100,10 +100,8 @@ static void initializeAllSensors( void );
   */
 int main( void )
 {
-
-
-  uint32_t msTick, msTickPrev = 0, msTickStateChange = 0;
-  uint8_t doubleTap = 0, state = 0;
+  uint32_t msTick, msTickPrev = 0;
+  uint8_t doubleTap = 0;
   
   /* STM32L4xx HAL library initialization:
   - Configure the Flash prefetch, instruction and Data caches
@@ -164,9 +162,6 @@ int main( void )
   enableAllSensors();
   
   
-  BSP_ACCELERO_Set_FS_Value( LSM6DSM_X_0_handle, 4.0f);
-  BSP_GYRO_Set_FS_Value(LSM6DSM_G_0_handle,245.0f);
-
   while (1)
   {
     /* Get sysTick value and check if it's time to execute the task */
@@ -186,7 +181,7 @@ int main( void )
 #endif      
       RTC_Handler( &RtcHandle );
       
-      Accelero_Sensor_Handler( LSM6DSM_X_0_handle, msTick, &msTickStateChange, &state);
+      Accelero_Sensor_Handler( LSM6DSM_X_0_handle );
       
       Gyro_Sensor_Handler( LSM6DSM_G_0_handle );
       

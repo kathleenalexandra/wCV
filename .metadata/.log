@@ -1,4 +1,4 @@
-!SESSION 2019-06-30 16:28:04.624 -----------------------------------------------
+!SESSION 2019-07-10 22:56:18.693 -----------------------------------------------
 eclipse.buildId=4.6.3.M20170301-0400
 java.version=1.8.0_131
 java.vendor=Oracle Corporation
@@ -6,28 +6,28 @@ BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
 Framework arguments:  -pluginCustomization ../Eclipse/configuration/st_pref.ini -product org.eclipse.epp.package.cpp.product -keyring /Users/alexandra/.eclipse_keyring
 Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -pluginCustomization ../Eclipse/configuration/st_pref.ini -product org.eclipse.epp.package.cpp.product -keyring /Users/alexandra/.eclipse_keyring
 
-!ENTRY org.eclipse.core.net 1 0 2019-06-30 16:28:07.010
+!ENTRY org.eclipse.core.net 1 0 2019-07-10 22:56:20.736
 !MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
 
-!ENTRY org.eclipse.equinox.registry 4 1 2019-06-30 16:28:10.938
+!ENTRY org.eclipse.equinox.registry 4 1 2019-07-10 22:56:24.257
 !MESSAGE Executable extension definition for "resolver" not found.
 
-!ENTRY org.eclipse.equinox.registry 4 1 2019-06-30 16:28:10.942
+!ENTRY org.eclipse.equinox.registry 4 1 2019-07-10 22:56:24.272
 !MESSAGE Executable extension definition for "resolver" not found.
 
-!ENTRY fr.ac6.mcu.ide 1 1 2019-06-30 16:28:11.498
+!ENTRY fr.ac6.mcu.ide 1 1 2019-07-10 22:56:24.805
 !MESSAGE Started RMI Server, listening on port 21112
 
-!ENTRY org.eclipse.cdt.core 1 0 2019-06-30 16:28:44.303
-!MESSAGE Indexed 'STM32L4xx-SensorTile' (59 sources, 152 headers) in 3.31 sec: 21,241 declarations; 91,933 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0%)
+!ENTRY org.eclipse.cdt.core 1 0 2019-07-10 22:56:56.782
+!MESSAGE Indexed 'STM32L4xx-SensorTile' (24 sources, 105 headers) in 2.22 sec: 8,879 declarations; 49,934 references; 0 unresolved inclusions; 0 syntax errors; 26 unresolved names (0.044%)
 
-!ENTRY org.eclipse.launchbar.core 2 0 2019-06-30 16:32:43.836
+!ENTRY org.eclipse.launchbar.core 2 0 2019-07-10 23:01:57.098
 !MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
 
-!ENTRY org.eclipse.launchbar.core 2 0 2019-06-30 16:32:43.837
+!ENTRY org.eclipse.launchbar.core 2 0 2019-07-10 23:01:57.099
 !MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
 
-!ENTRY fr.ac6.mcu.debug 4 5012 2019-06-30 17:25:26.793
+!ENTRY fr.ac6.mcu.debug 4 5012 2019-07-10 23:50:34.004
 !MESSAGE Error in final launch sequence
 !STACK 1
 org.eclipse.core.runtime.CoreException: Failed to execute MI command:
@@ -48,7 +48,7 @@ localhost:3333: Operation timed out.
 Caused by: java.lang.Exception: localhost:3333: Operation timed out.
 	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:941)
 	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:770)
-!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-06-30 17:25:26.794
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-07-10 23:50:34.007
 !MESSAGE Failed to execute MI command:
 -target-select remote localhost:3333
 
@@ -59,352 +59,47 @@ java.lang.Exception: localhost:3333: Operation timed out.
 	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:941)
 	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:770)
 
-!ENTRY fr.ac6.mcu.debug 4 5012 2019-06-30 17:25:59.870
-!MESSAGE Error in final launch sequence
-!STACK 1
-org.eclipse.core.runtime.CoreException: Failed to execute MI command:
--target-select remote localhost:3333
-
-Error message from debugger back end:
-localhost:3333: Operation timed out.
-	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:111)
-	at fr.ac6.mcu.debug.launching.MCUGDBJtagDSFLaunchConfigurationDelegate.launchDebugSession(MCUGDBJtagDSFLaunchConfigurationDelegate.java:248)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:101)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:90)
-	at fr.ac6.mcu.debug.launching.MCUGDBJtagDSFLaunchConfigurationDelegate.launch(MCUGDBJtagDSFLaunchConfigurationDelegate.java:306)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
-Caused by: java.lang.Exception: localhost:3333: Operation timed out.
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:941)
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:770)
-!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-06-30 17:25:59.871
-!MESSAGE Failed to execute MI command:
--target-select remote localhost:3333
-
-Error message from debugger back end:
-localhost:3333: Operation timed out.
+!ENTRY org.eclipse.cdt.dsf 4 -1 2019-07-11 09:36:54.726
+!MESSAGE Invocation exception when calling a service event handler method
 !STACK 0
-java.lang.Exception: localhost:3333: Operation timed out.
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:941)
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:770)
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.GeneratedMethodAccessor95.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.cdt.dsf.service.DsfSession.doDispatchEvent(DsfSession.java:531)
+	at org.eclipse.cdt.dsf.service.DsfSession.access$2(DsfSession.java:475)
+	at org.eclipse.cdt.dsf.service.DsfSession$3.run(DsfSession.java:398)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NullPointerException
+	at org.eclipse.cdt.dsf.gdb.service.GDBBackend.getUpdateThreadListOnSuspend(GDBBackend.java:272)
+	at org.eclipse.cdt.dsf.gdb.service.GDBProcesses_7_0.eventDispatched(GDBProcesses_7_0.java:1901)
+	... 13 more
+Root exception:
+java.lang.NullPointerException
+	at org.eclipse.cdt.dsf.gdb.service.GDBBackend.getUpdateThreadListOnSuspend(GDBBackend.java:272)
+	at org.eclipse.cdt.dsf.gdb.service.GDBProcesses_7_0.eventDispatched(GDBProcesses_7_0.java:1901)
+	at sun.reflect.GeneratedMethodAccessor95.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.cdt.dsf.service.DsfSession.doDispatchEvent(DsfSession.java:531)
+	at org.eclipse.cdt.dsf.service.DsfSession.access$2(DsfSession.java:475)
+	at org.eclipse.cdt.dsf.service.DsfSession$3.run(DsfSession.java:398)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
 
-!ENTRY fr.ac6.mcu.debug 4 5012 2019-06-30 17:28:25.967
-!MESSAGE Error in final launch sequence
-!STACK 1
-org.eclipse.core.runtime.CoreException: Failed to execute MI command:
--target-select remote localhost:3333
-
-Error message from debugger back end:
-localhost:3333: Operation timed out.
-	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:111)
-	at fr.ac6.mcu.debug.launching.MCUGDBJtagDSFLaunchConfigurationDelegate.launchDebugSession(MCUGDBJtagDSFLaunchConfigurationDelegate.java:248)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:101)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:90)
-	at fr.ac6.mcu.debug.launching.MCUGDBJtagDSFLaunchConfigurationDelegate.launch(MCUGDBJtagDSFLaunchConfigurationDelegate.java:306)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
-Caused by: java.lang.Exception: localhost:3333: Operation timed out.
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:941)
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:770)
-!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-06-30 17:28:25.967
-!MESSAGE Failed to execute MI command:
--target-select remote localhost:3333
-
-Error message from debugger back end:
-localhost:3333: Operation timed out.
-!STACK 0
-java.lang.Exception: localhost:3333: Operation timed out.
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:941)
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:770)
-
-!ENTRY fr.ac6.mcu.debug 4 5012 2019-06-30 17:56:23.181
-!MESSAGE Error in final launch sequence
-!STACK 1
-org.eclipse.core.runtime.CoreException: Failed to execute MI command:
--target-select remote localhost:3333
-
-Error message from debugger back end:
-localhost:3333: Operation timed out.
-	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:111)
-	at fr.ac6.mcu.debug.launching.MCUGDBJtagDSFLaunchConfigurationDelegate.launchDebugSession(MCUGDBJtagDSFLaunchConfigurationDelegate.java:248)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:101)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:90)
-	at fr.ac6.mcu.debug.launching.MCUGDBJtagDSFLaunchConfigurationDelegate.launch(MCUGDBJtagDSFLaunchConfigurationDelegate.java:306)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
-Caused by: java.lang.Exception: localhost:3333: Operation timed out.
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:941)
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:770)
-!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-06-30 17:56:23.181
-!MESSAGE Failed to execute MI command:
--target-select remote localhost:3333
-
-Error message from debugger back end:
-localhost:3333: Operation timed out.
-!STACK 0
-java.lang.Exception: localhost:3333: Operation timed out.
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:941)
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:770)
-
-!ENTRY fr.ac6.mcu.debug 4 5012 2019-06-30 17:56:36.656
-!MESSAGE Error in final launch sequence
-!STACK 1
-org.eclipse.core.runtime.CoreException: Failed to execute MI command:
--target-select remote localhost:3333
-
-Error message from debugger back end:
-localhost:3333: Operation timed out.
-	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:111)
-	at fr.ac6.mcu.debug.launching.MCUGDBJtagDSFLaunchConfigurationDelegate.launchDebugSession(MCUGDBJtagDSFLaunchConfigurationDelegate.java:248)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:101)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:90)
-	at fr.ac6.mcu.debug.launching.MCUGDBJtagDSFLaunchConfigurationDelegate.launch(MCUGDBJtagDSFLaunchConfigurationDelegate.java:306)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
-Caused by: java.lang.Exception: localhost:3333: Operation timed out.
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:941)
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:770)
-!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-06-30 17:56:36.657
-!MESSAGE Failed to execute MI command:
--target-select remote localhost:3333
-
-Error message from debugger back end:
-localhost:3333: Operation timed out.
-!STACK 0
-java.lang.Exception: localhost:3333: Operation timed out.
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:941)
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:770)
-
-!ENTRY org.eclipse.core.jobs 2 2 2019-07-01 12:11:54.661
-!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$InputReadJob
-
-!ENTRY org.eclipse.core.jobs 2 2 2019-07-01 12:11:54.664
-!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.debug.core.DebugPlugin$EventDispatchJob
-!SESSION 2019-07-01 12:14:48.846 -----------------------------------------------
-eclipse.buildId=4.6.3.M20170301-0400
-java.version=1.8.0_131
-java.vendor=Oracle Corporation
-BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
-Framework arguments:  -pluginCustomization ../Eclipse/configuration/st_pref.ini -product org.eclipse.epp.package.cpp.product -keyring /Users/alexandra/.eclipse_keyring
-Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -pluginCustomization ../Eclipse/configuration/st_pref.ini -product org.eclipse.epp.package.cpp.product -keyring /Users/alexandra/.eclipse_keyring
-
-!ENTRY org.eclipse.core.net 1 0 2019-07-01 12:14:51.047
-!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
-
-!ENTRY org.eclipse.equinox.registry 4 1 2019-07-01 12:14:54.351
-!MESSAGE Executable extension definition for "resolver" not found.
-
-!ENTRY org.eclipse.equinox.registry 4 1 2019-07-01 12:14:54.353
-!MESSAGE Executable extension definition for "resolver" not found.
-
-!ENTRY fr.ac6.mcu.ide 1 1 2019-07-01 12:14:56.101
-!MESSAGE Started RMI Server, listening on port 21112
-
-!ENTRY org.eclipse.launchbar.core 2 0 2019-07-02 18:25:27.002
-!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
-
-!ENTRY org.eclipse.launchbar.core 2 0 2019-07-02 18:25:27.003
-!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
-
-!ENTRY org.eclipse.core.jobs 2 2 2019-07-09 19:55:20.204
+!ENTRY org.eclipse.core.jobs 2 2 2019-07-11 09:36:55.155
 !MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.debug.core.DebugPlugin$EventDispatchJob
 
-!ENTRY org.eclipse.core.jobs 2 2 2019-07-09 19:55:20.207
+!ENTRY org.eclipse.core.jobs 2 2 2019-07-11 09:36:55.155
 !MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$InputReadJob
-!SESSION 2019-07-09 19:55:23.204 -----------------------------------------------
-eclipse.buildId=4.6.3.M20170301-0400
-java.version=1.8.0_131
-java.vendor=Oracle Corporation
-BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
-Framework arguments:  -pluginCustomization ../Eclipse/configuration/st_pref.ini -product org.eclipse.epp.package.cpp.product -keyring /Users/alexandra/.eclipse_keyring
-Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -pluginCustomization ../Eclipse/configuration/st_pref.ini -product org.eclipse.epp.package.cpp.product -keyring /Users/alexandra/.eclipse_keyring
-
-!ENTRY org.eclipse.core.net 1 0 2019-07-09 19:55:25.773
-!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
-
-!ENTRY org.eclipse.equinox.registry 4 1 2019-07-09 19:55:29.442
-!MESSAGE Executable extension definition for "resolver" not found.
-
-!ENTRY org.eclipse.equinox.registry 4 1 2019-07-09 19:55:29.446
-!MESSAGE Executable extension definition for "resolver" not found.
-
-!ENTRY fr.ac6.mcu.ide 1 1 2019-07-09 19:55:31.374
-!MESSAGE Started RMI Server, listening on port 21112
-
-!ENTRY org.eclipse.launchbar.core 2 0 2019-07-10 21:22:57.972
-!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
-
-!ENTRY org.eclipse.launchbar.core 2 0 2019-07-10 21:22:57.974
-!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
-
-!ENTRY fr.ac6.mcu.debug 4 5012 2019-07-10 21:23:12.616
-!MESSAGE Error in final launch sequence
-!STACK 1
-org.eclipse.core.runtime.CoreException: Failed to execute MI command:
--target-select remote localhost:3333
-
-Error message from debugger back end:
-localhost:3333: Operation timed out.
-	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:111)
-	at fr.ac6.mcu.debug.launching.MCUGDBJtagDSFLaunchConfigurationDelegate.launchDebugSession(MCUGDBJtagDSFLaunchConfigurationDelegate.java:248)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:101)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:90)
-	at fr.ac6.mcu.debug.launching.MCUGDBJtagDSFLaunchConfigurationDelegate.launch(MCUGDBJtagDSFLaunchConfigurationDelegate.java:306)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
-Caused by: java.lang.Exception: localhost:3333: Operation timed out.
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:941)
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:770)
-!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-07-10 21:23:12.620
-!MESSAGE Failed to execute MI command:
--target-select remote localhost:3333
-
-Error message from debugger back end:
-localhost:3333: Operation timed out.
-!STACK 0
-java.lang.Exception: localhost:3333: Operation timed out.
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:941)
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:770)
-
-!ENTRY fr.ac6.mcu.debug 4 5012 2019-07-10 21:55:24.994
-!MESSAGE Error in final launch sequence
-!STACK 1
-org.eclipse.core.runtime.CoreException: Failed to execute MI command:
--target-select remote localhost:3333
-
-Error message from debugger back end:
-Remote communication error.  Target disconnected.: Connection reset by peer.
-	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:111)
-	at fr.ac6.mcu.debug.launching.MCUGDBJtagDSFLaunchConfigurationDelegate.launchDebugSession(MCUGDBJtagDSFLaunchConfigurationDelegate.java:248)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:101)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:90)
-	at fr.ac6.mcu.debug.launching.MCUGDBJtagDSFLaunchConfigurationDelegate.launch(MCUGDBJtagDSFLaunchConfigurationDelegate.java:306)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
-Caused by: java.lang.Exception: Remote communication error.  Target disconnected.: Connection reset by peer.
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:941)
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:770)
-!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-07-10 21:55:24.994
-!MESSAGE Failed to execute MI command:
--target-select remote localhost:3333
-
-Error message from debugger back end:
-Remote communication error.  Target disconnected.: Connection reset by peer.
-!STACK 0
-java.lang.Exception: Remote communication error.  Target disconnected.: Connection reset by peer.
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:941)
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:770)
-
-!ENTRY fr.ac6.mcu.debug 4 5012 2019-07-10 22:00:41.250
-!MESSAGE Error in final launch sequence
-!STACK 1
-org.eclipse.core.runtime.CoreException: Failed to execute MI command:
-load /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/DataLog/SW4STM32/STM32L4xx-SensorTile/Release/STM32L4xx-SensorTile.elf 
-
-Error message from debugger back end:
-Error erasing flash with vFlashErase packet
-	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:111)
-	at fr.ac6.mcu.debug.launching.MCUGDBJtagDSFLaunchConfigurationDelegate.launchDebugSession(MCUGDBJtagDSFLaunchConfigurationDelegate.java:248)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:101)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:90)
-	at fr.ac6.mcu.debug.launching.MCUGDBJtagDSFLaunchConfigurationDelegate.launch(MCUGDBJtagDSFLaunchConfigurationDelegate.java:306)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
-Caused by: java.lang.Exception: Error erasing flash with vFlashErase packet
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:941)
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:770)
-!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-07-10 22:00:41.251
-!MESSAGE Failed to execute MI command:
-load /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/DataLog/SW4STM32/STM32L4xx-SensorTile/Release/STM32L4xx-SensorTile.elf 
-
-Error message from debugger back end:
-Error erasing flash with vFlashErase packet
-!STACK 0
-java.lang.Exception: Error erasing flash with vFlashErase packet
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:941)
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:770)
-
-!ENTRY fr.ac6.mcu.debug 4 5012 2019-07-10 22:13:09.348
-!MESSAGE Error in final launch sequence
-!STACK 1
-org.eclipse.core.runtime.CoreException: Failed to execute MI command:
--target-select remote localhost:3333
-
-Error message from debugger back end:
-Remote communication error.  Target disconnected.: Connection reset by peer.
-	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:111)
-	at fr.ac6.mcu.debug.launching.MCUGDBJtagDSFLaunchConfigurationDelegate.launchDebugSession(MCUGDBJtagDSFLaunchConfigurationDelegate.java:248)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:101)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:90)
-	at fr.ac6.mcu.debug.launching.MCUGDBJtagDSFLaunchConfigurationDelegate.launch(MCUGDBJtagDSFLaunchConfigurationDelegate.java:306)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
-Caused by: java.lang.Exception: Remote communication error.  Target disconnected.: Connection reset by peer.
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:941)
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:770)
-!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-07-10 22:13:09.348
-!MESSAGE Failed to execute MI command:
--target-select remote localhost:3333
-
-Error message from debugger back end:
-Remote communication error.  Target disconnected.: Connection reset by peer.
-!STACK 0
-java.lang.Exception: Remote communication error.  Target disconnected.: Connection reset by peer.
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:941)
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:770)
-
-!ENTRY fr.ac6.mcu.debug 4 5012 2019-07-10 22:13:39.841
-!MESSAGE Error in final launch sequence
-!STACK 1
-org.eclipse.core.runtime.CoreException: Failed to execute MI command:
--target-select remote localhost:3333
-
-Error message from debugger back end:
-localhost:3333: Operation timed out.
-	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:111)
-	at fr.ac6.mcu.debug.launching.MCUGDBJtagDSFLaunchConfigurationDelegate.launchDebugSession(MCUGDBJtagDSFLaunchConfigurationDelegate.java:248)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:101)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:90)
-	at fr.ac6.mcu.debug.launching.MCUGDBJtagDSFLaunchConfigurationDelegate.launch(MCUGDBJtagDSFLaunchConfigurationDelegate.java:306)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
-Caused by: java.lang.Exception: localhost:3333: Operation timed out.
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:941)
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:770)
-!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2019-07-10 22:13:39.842
-!MESSAGE Failed to execute MI command:
--target-select remote localhost:3333
-
-Error message from debugger back end:
-localhost:3333: Operation timed out.
-!STACK 0
-java.lang.Exception: localhost:3333: Operation timed out.
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:941)
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:770)
