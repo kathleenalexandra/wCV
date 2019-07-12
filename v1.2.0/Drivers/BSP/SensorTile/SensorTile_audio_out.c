@@ -38,7 +38,6 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32l4xx_hal.h"
-#include "SensorTile_audio_in.h"
 #include "SensorTile_audio_out.h"
 
 /** @addtogroup BSP
